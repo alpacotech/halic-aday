@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 128" fill="none">
+  <title>Haliç için özel kedi sticker'ı</title>
+  <desc>İstanbul'un kampüs kedilerinden esinlenen özgün çizim. Resmî maskot değildir.</desc>
+  <defs>
+    <path id="cat" fill-rule="evenodd" clip-rule="evenodd" d="M16 12c-2-2-4-1-4 2l2 29C5 54 8 69 19 79c8 7 18 11 29 11s21-4 29-11c11-10 14-25 5-36l2-29c0-3-2-4-4-2L63 25c-9-4-21-4-30 0L16 12Zm9 40c2-9 13-10 17-1l-5 2c-2-5-6-5-8 0l-4-1Zm29-1c4-9 15-8 17 1l-4 1c-2-5-6-5-8 0l-5-2Zm-12 5h12l-6 7-6-7Zm4 7h4c0 6 6 8 11 4l3 4c-6 5-12 4-16 0-4 4-10 5-16 0l3-4c5 4 11 2 11-4Z"/>
+    <path id="silhouette" d="M16 12c-2-2-4-1-4 2l2 29C5 54 8 69 19 79c8 7 18 11 29 11s21-4 29-11c11-10 14-25 5-36l2-29c0-3-2-4-4-2L63 25c-9-4-21-4-30 0L16 12Z"/>
+  </defs>
+  <g transform="translate(10 9)">
+    <use href="#silhouette" transform="translate(1 11)" fill="#000045" stroke="#000045" stroke-width="10" stroke-linejoin="round"/>
+    <use href="#silhouette" transform="translate(0 6)" fill="#8babf0" stroke="#8babf0" stroke-width="10" stroke-linejoin="round"/>
+    <use href="#silhouette" fill="#f1f2f2" stroke="#f1f2f2" stroke-width="10" stroke-linejoin="round"/>
+    <use href="#cat" fill="#001dc2"/>
+  </g>
+</svg>

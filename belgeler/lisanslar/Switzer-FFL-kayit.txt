@@ -1,0 +1,9 @@
+Switzer — Indian Type Foundry
+Copyright 2015-2021 Indian Type Foundry. All rights reserved.
+
+Provided under the ITF Free Font License (FFL).
+Official family: https://www.fontshare.com/fonts/switzer
+License: https://www.fontshare.com/licenses/itf-ffl
+Terms: https://fontshare.com/terms
+
+The original Fontshare WOFF2 files are included unmodified, with their embedded name/copyright/license records.

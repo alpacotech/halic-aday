@@ -1,0 +1,25 @@
+{
+  "package_date": "2026-11-18",
+  "source_version": 7,
+  "source_commit": "bd74f7e349cd38dc119f19170d8522c057116365",
+  "site_file_count": 33,
+  "site_bytes": 26668313,
+  "source_and_publish_directory": "site",
+  "build_required": false,
+  "database_required": false,
+  "runtime_cdn_required": false,
+  "scope": "Yeni aday ana sayfası; alt sayfalar mevcut resmî Haliç URL’lerindedir.",
+  "source_file_integrity": "33 site dosyası yayımlanmış kaynak sürümüyle birebir karşılaştırılmıştır.",
+  "verification": {
+    "archive_crc": "passed",
+    "program_records": 93,
+    "local_references_and_anchors": "passed",
+    "javascript_syntax": "passed",
+    "browser_from_extracted_archive": "passed",
+    "turkish_search_psikoloji": "2 program",
+    "program_dialog_and_fee_selection": "passed",
+    "mobile_menu_at_390x844": "passed",
+    "browser_warnings_and_errors_observed": 0,
+    "scope": "Yerel paket ve temel etkileşimler; kurum sunucusu entegrasyon testi değildir."
+  }
+}

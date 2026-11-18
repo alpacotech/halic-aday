@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-11-18",
+  "sources": [
+    {
+      "file": "Caveat-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/OFL.txt",
+      "sha256": "1f9d81d094273d82f3898a1ee8b598a717d050ecbf5ff7bede105b704880157b",
+      "bytes": 4385
+    },
+    {
+      "file": "Inter-OFL.txt",
+      "url": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "bytes": 4380
+    }
+  ],
+  "verbatim": {
+    "status": "license_document_not_in_project",
+    "font": "verbatim-condensed-bold.woff2",
+    "metadata_copyright": "Copyright © 2018 by Paulo Goode. All rights reserved.",
+    "metadata_license_url": null,
+    "note": "Mevcut proje içinde Verbatim webfont lisans belgesi bulunamadı. Font dosyası veya site değiştirilmedi."
+  }
+}

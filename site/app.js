@@ -1,10 +1,21 @@
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const smoothScroll = !reducedMotion && window.Lenis ? new Lenis({
+  smoothWheel: true, infinite: false, orientation: 'vertical', gestureOrientation: 'vertical',
+  autoRaf: true, autoToggle: false, anchors: true, allowNestedScroll: true,
+  syncTouch: false, stopInertiaOnNavigate: true
+}) : null;
+function syncScrollLock() {
+  if (!smoothScroll) return;
+  const locked = document.body.classList.contains('locked');
+  if (locked && !smoothScroll.isStopped) smoothScroll.stop();
+  else if (!locked && smoothScroll.isStopped) smoothScroll.start();
+}
 document.documentElement.classList.add('js-ready');
 if (!reducedMotion) document.documentElement.classList.add('js-motion');
 
-const revealObserver = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } }), { threshold: .12 });
+const revealObserver = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } }), { threshold: .5 });
 $$('.reveal').forEach(el => revealObserver.observe(el));
 
 // Navigation and accessible mobile menu.
@@ -17,7 +28,7 @@ function setMenu(open) {
   $('#mobile-menu').inert = !open;
   $('#mobile-menu').classList.toggle('open', open);
   document.body.classList.toggle('menu-is-open', open);
-  document.body.classList.toggle('locked', open);
+  document.body.classList.toggle('locked', open); syncScrollLock();
   $('#main').inert = open;
   $('.footer').inert = open;
   if (!open && $('#mobile-menu').contains(document.activeElement)) menuButton.focus();
@@ -50,27 +61,37 @@ addEventListener('scroll', () => { if (!scrollTick) { requestAnimationFrame(() =
 updateHeader();
 
 // Shared native dialogs handle focus, Escape and keyboard navigation.
-function openDialog(dialog) { if (menuOpen) setMenu(false); dialog.showModal(); document.body.classList.add('locked'); }
+function openDialog(dialog) { if (menuOpen) setMenu(false); dialog.showModal(); document.body.classList.add('locked'); syncScrollLock(); }
 $$('dialog').forEach(dialog => {
   $('.dialog-close', dialog).addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { const r = dialog.getBoundingClientRect(); if (e.target === dialog && (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom)) dialog.close(); });
-  dialog.addEventListener('close', () => document.body.classList.remove('locked'));
+  dialog.addEventListener('close', () => { document.body.classList.remove('locked'); syncScrollLock(); });
 });
 $$('.consult-open').forEach(b => b.addEventListener('click', () => openDialog($('#consult-dialog'))));
 
 // Search the complete official program list, retaining the chosen program for fees.
-let programs = [], visibleLimit = 6, currentProgram = null;
+let programs = [], visibleLimit = 6, currentProgram = null, discoveryOpened = false, activeInterest = '';
 const normalize = text => text.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
 const search = $('#program-search');
 const degree = $('#degree-filter');
 const score = $('#score-filter');
 const language = $('#language-filter');
+const clinicalPrograms = new Set(['Anestezi', 'Fizyoterapi', 'İlk ve Acil Yardım', 'Optisyenlik', 'Tıbbi Görüntüleme Teknikleri'].map(normalize));
 function matches() {
   const q = normalize(search.value.trim());
-  return programs.filter(p => (!q || normalize(`${p.name} ${p.faculty}`).includes(q)) && (!degree.value || p.degree === degree.value) && (!score.value || p.score === score.value) && (!language.value || p.language === language.value));
+  return programs.filter(p => {
+    const keywordMatch = !q || normalize(`${p.name} ${p.faculty}`).includes(q);
+    const healthInterestMatch = /saglik|tip fakultesi/.test(normalize(p.faculty)) || normalize(p.name).includes('saglik') || clinicalPrograms.has(normalize(p.name));
+    const interestMatch = activeInterest === 'Sağlık' ? healthInterestMatch : keywordMatch;
+    return interestMatch && (!degree.value || p.degree === degree.value) && (!score.value || p.score === score.value) && (!language.value || p.language === language.value);
+  });
 }
 function renderPrograms() {
   const results = matches();
+  const hasCriteria = Boolean(search.value || degree.value || score.value || language.value);
+  $('#discovery-results').hidden = !(discoveryOpened || hasCriteria);
+  const selectedInterest = $$('.interest-ticket').find(b => b.dataset.interest === activeInterest);
+  $('#discovery-result-heading').textContent = selectedInterest ? `${selectedInterest.dataset.interest} için bir sahne.` : 'Merakının peşinden.';
   $('#program-list').replaceChildren();
   results.slice(0, visibleLimit).forEach((p, i) => {
     const b = document.createElement('button'); b.className = 'program-row';
@@ -81,7 +102,7 @@ function renderPrograms() {
     const level = document.createElement('span'); level.textContent = p.degree;
     const scoring = document.createElement('span'); scoring.className = 'program-score'; scoring.textContent = p.score || 'Programı incele';
     meta.append(level, scoring);
-    const arrow = document.createElement('span'); arrow.className = 'program-arrow'; arrow.textContent = '↗'; arrow.setAttribute('aria-hidden', 'true');
+    const arrow = document.createElement('span'); arrow.className = 'program-arrow'; arrow.innerHTML = '<svg class="ui-chevron" viewBox="0 0 16 20" aria-hidden="true"><path d="m5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'; arrow.setAttribute('aria-hidden', 'true');
     b.append(index, name, faculty, meta, arrow); b.setAttribute('aria-label', `${p.name}, ${p.degree}, ${p.score}. Ayrıntıları incele`);
     b.addEventListener('click', () => showProgram(p)); $('#program-list').append(b);
   });
@@ -89,13 +110,13 @@ function renderPrograms() {
   $('#program-empty').hidden = results.length !== 0;
   $('#more-programs').hidden = results.length <= visibleLimit;
   $('#clear-filters').hidden = !(search.value || degree.value || score.value || language.value);
-  $$('.interest-chips button').forEach(b => b.setAttribute('aria-pressed', String(normalize(b.dataset.interest) === normalize(search.value.trim()))));
+  $$('.interest-chips button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.interest === activeInterest)));
 }
-function resetFilters() { search.value = ''; degree.value = ''; score.value = ''; language.value = ''; visibleLimit = 6; renderPrograms(); }
-[search, degree, score, language].forEach(el => el.addEventListener(el === search ? 'input' : 'change', () => { visibleLimit = 6; renderPrograms(); }));
+function resetFilters() { discoveryOpened = true; activeInterest = ''; search.value = ''; degree.value = ''; score.value = ''; language.value = ''; visibleLimit = 6; renderPrograms(); }
+[search, degree, score, language].forEach(el => el.addEventListener(el === search ? 'input' : 'change', () => { discoveryOpened = true; if (el === search) activeInterest = ''; visibleLimit = 6; renderPrograms(); }));
 $('#clear-filters').addEventListener('click', resetFilters); $('#empty-reset').addEventListener('click', resetFilters);
 $('#more-programs').addEventListener('click', () => { visibleLimit += 12; renderPrograms(); });
-$('.hero-search').addEventListener('submit', e => { e.preventDefault(); resetFilters(); search.value = $('#hero-search').value; renderPrograms(); scrollToFocus($('#bolumler'), search); });
+$('.hero-search').addEventListener('submit', e => { e.preventDefault(); resetFilters(); search.value = $('#hero-search').value; renderPrograms(); scrollToFocus($('#discovery-results'), $('#discovery-result-heading')); });
 function showProgram(p) {
   currentProgram = p;
   $('#program-dialog-title').textContent = p.name;
@@ -111,15 +132,20 @@ function showProgram(p) {
 function chooseFeeProgram(p) {
   $('#fee-program').value = p ? p.url : '';
   const box = $('#selected-program'); box.replaceChildren(); box.hidden = !p;
-  if (p) { const text = document.createElement('p'); text.textContent = `${p.name} · ${p.degree} · ${p.score}`; const a = document.createElement('a'); a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Programın resmî bilgileri ↗'; box.append(text, a); }
+  if (p) { const text = document.createElement('p'); text.textContent = `${p.name} · ${p.degree} · ${p.score}`; const a = document.createElement('a'); a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Programın resmî bilgileri'; box.append(text, a); }
 }
-$('#program-fees').addEventListener('click', () => { chooseFeeProgram(currentProgram); $('#program-dialog').close(); scrollToFocus($('#ucretler'), $('#fee-program')); });
+let pendingProgramFeeJump = false;
+$('#program-fees').addEventListener('click', () => { chooseFeeProgram(currentProgram); pendingProgramFeeJump = true; $('#program-dialog').close(); });
+$('#program-dialog').addEventListener('close', () => {
+  if (!pendingProgramFeeJump) return; pendingProgramFeeJump = false;
+  requestAnimationFrame(() => scrollToFocus($('#ucretler'), $('#fee-program')));
+});
 $('#fee-program').addEventListener('change', e => chooseFeeProgram(programs.find(p => p.url === e.target.value)));
 fetch('programs.json').then(r => { if (!r.ok) throw Error('Program listesi yüklenemedi'); return r.json(); }).then(data => {
   programs = data;
   renderPrograms();
   programs.forEach(p => { const option = document.createElement('option'); option.value = p.url; option.textContent = p.name; $('#fee-program').append(option); });
-}).catch(() => { $('#result-count').textContent = 'Program listesi şu anda yüklenemiyor.'; $('#program-list').innerHTML = '<a class="arrow-link" href="https://aday.halic.edu.tr/bolumler-programlar/" target="_blank" rel="noopener"><span class="arrow-box">↗</span>Resmî program listesini incele</a>'; $('#more-programs').hidden = true; });
+}).catch(() => { $('#discovery-results').hidden = false; $('#result-count').textContent = 'Program listesi şu anda yüklenemiyor.'; $('#program-list').innerHTML = '<a class="arrow-link" href="https://aday.halic.edu.tr/bolumler-programlar/" target="_blank" rel="noopener">Resmî program listesini incele</a>'; $('#more-programs').hidden = true; });
 
 // Reference-style image and text transitions, with keyboard operable tabs.
 const slides = [
@@ -169,17 +195,20 @@ film.querySelector('source').addEventListener('error', () => $('.video-error').h
 
 // The keyboard focus follows the visitor's intentional jump.
 function scrollToFocus(section, control) {
-  control.focus({ preventScroll: true });
-  section.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' });
+  const focusDestination = () => control.focus({ preventScroll: true });
+  const cardIndex = referenceCards.indexOf(section);
+  const scrollTarget = cardIndex >= 0 ? referenceMarkers[cardIndex] : section;
+  if (smoothScroll) smoothScroll.scrollTo(scrollTarget, { offset: cardIndex >= 0 ? -56 : -110, force: true, onComplete: focusDestination });
+  else { section.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' }); focusDestination(); }
 }
 
 // Interest labels are real shortcuts into the same official program search.
 function chooseInterest(value) {
-  resetFilters(); search.value = value; renderPrograms();
-  scrollToFocus($('#bolumler'), search);
+  resetFilters(); activeInterest = value; search.value = value; renderPrograms();
+  scrollToFocus($('#discovery-results'), $('#discovery-result-heading'));
 }
 $$('[data-interest]').forEach(button => button.addEventListener('click', e => {
-  e.preventDefault(); chooseInterest(button.dataset.interest);
+  e.preventDefault(); e.stopPropagation(); closeDropdown(); chooseInterest(button.dataset.interest);
 }));
 
 // Duplicate the visual strip with an inert copy for a seamless, accessible loop.
@@ -193,8 +222,22 @@ marqueeTrack.append(marqueeSet, marqueeCopy);
 // Continuous movement is optional and background playback stops off screen.
 const heroVideo = $('#hero-video'), motionButton = $('#motion-toggle');
 let motionPaused = reducedMotion || Boolean(navigator.connection?.saveData), heroInView = true;
+const keduMascot = $('.kedu-mascot');
+let keduInView = false;
+function syncKeduMotion() {
+  if (!keduMascot) return;
+  const source = !motionPaused && keduInView && !document.hidden ? keduMascot.dataset.animatedSrc : keduMascot.dataset.posterSrc;
+  if (keduMascot.getAttribute('src') !== source) keduMascot.src = source;
+}
+if (keduMascot) {
+  new IntersectionObserver(entries => { keduInView = entries[0].isIntersecting; syncKeduMotion(); }, { rootMargin: '100px 0px', threshold: .1 }).observe(keduMascot);
+  keduMascot.addEventListener('error', () => { if (keduMascot.getAttribute('src') !== keduMascot.dataset.posterSrc) { keduMascot.dataset.animatedSrc = keduMascot.dataset.posterSrc; keduMascot.src = keduMascot.dataset.posterSrc; } });
+}
 async function syncBackgroundVideo() {
+  syncKeduMotion();
   document.body.classList.toggle('motion-paused', motionPaused);
+  if (smoothScroll) smoothScroll.options.lerp = motionPaused ? 1 : .1;
+  requestReferenceEffects();
   motionButton.setAttribute('aria-pressed', String(motionPaused));
   motionButton.innerHTML = motionPaused ? '<span>▶</span> Hareketi başlat' : '<span>Ⅱ</span> Hareketi durdur';
   if (motionPaused || !heroInView || $('#film-dialog').open || document.hidden) { heroVideo.pause(); return; }
@@ -209,17 +252,111 @@ new IntersectionObserver(entries => { heroInView = entries[0].isIntersecting; sy
 document.addEventListener('visibilitychange', syncBackgroundVideo);
 $('#film-dialog').addEventListener('close', syncBackgroundVideo);
 $('#play-film').addEventListener('click', () => heroVideo.pause());
-syncBackgroundVideo();
 
-// A tall card remains in normal flow so its actions and notes are always readable.
-function syncStackCards() {
-  $$('.stack-card').forEach((card, index) => {
-    const fits = !reducedMotion && innerWidth > 600 && card.offsetHeight <= innerHeight - (112 + index * 20) - 20;
+$('#discovery-result-heading').tabIndex = -1;
+$('#explore-all').addEventListener('click', () => { resetFilters(); scrollToFocus($('#discovery-results'), $('#discovery-result-heading')); });
+$('.discovery-filters').addEventListener('toggle', e => { if (e.target.open) { discoveryOpened = true; renderPrograms(); } });
+
+// Source-matched scroll targets: outgoing service cards and the nested about media.
+const referenceCards = $$('.stack-section > .stack-card');
+const referenceMarkers = referenceCards.map((card, index) => {
+  const marker = document.createElement('div'); marker.className = 'stack-marker'; marker.setAttribute('aria-hidden', 'true');
+  card.before(marker); card.style.zIndex = String(index + 1); return marker;
+});
+const referenceMedia = $('.intro-photo.scroll-media');
+const referenceStates = referenceCards.slice(0, -1).map(() => ({ x: 0, v: 0 }));
+const mediaState = { x: 0, v: 0 };
+let referenceFrame = 0, referenceLastTime = 0;
+const clamp01 = value => Math.max(0, Math.min(1, value));
+function syncReferenceCardLayout() {
+  referenceCards.forEach((card, index) => {
+    const fits = !reducedMotion && innerWidth >= 810 && index < referenceCards.length - 1 && card.offsetHeight <= innerHeight - 70;
     card.classList.toggle('can-stick', fits);
   });
+  requestReferenceEffects();
 }
-const stackObserver = new ResizeObserver(syncStackCards);
-$$('.stack-card').forEach(card => stackObserver.observe(card));
-addEventListener('resize', syncStackCards);
-document.fonts.ready.then(syncStackCards);
-syncStackCards();
+function requestReferenceEffects() {
+  if (!referenceFrame) referenceFrame = requestAnimationFrame(renderReferenceEffects);
+}
+function advanceReferenceSpring(state, target, dt) {
+  let remaining = dt;
+  while (remaining > 0) {
+    const step = Math.min(remaining, 1 / 120);
+    const acceleration = 500 * (target - state.x) - 60 * state.v;
+    state.v += acceleration * step; state.x += state.v * step; remaining -= step;
+  }
+  if (Math.abs(state.x - target) < .0001 && Math.abs(state.v) < .001) { state.x = target; state.v = 0; }
+  return Math.abs(state.x - target) > .0001 || Math.abs(state.v) > .001;
+}
+function renderReferenceEffects(time) {
+  referenceFrame = 0;
+  const dt = referenceLastTime ? Math.min((time - referenceLastTime) / 1000, .05) : 1 / 60;
+  referenceLastTime = time;
+  const staticMotion = reducedMotion || motionPaused;
+  let unsettled = false;
+  referenceStates.forEach((state, index) => {
+    const current = referenceCards[index], next = referenceCards[index + 1];
+    const nextTop = referenceMarkers[index + 1].getBoundingClientRect().top;
+    const active = !staticMotion && (innerWidth < 810 || current.classList.contains('can-stick'));
+    const threshold = innerWidth < 810 && index === 0 ? .5 : 1;
+    const target = active ? clamp01((innerHeight + threshold - nextTop) / Math.max(1, next.clientHeight)) : 0;
+    unsettled = advanceReferenceSpring(state, target, dt) || unsettled;
+    current.style.transform = active ? `scale(${1 - .3 * state.x}) rotate(${10 * state.x}deg)` : 'none';
+  });
+  if (referenceMedia) {
+    const top = referenceMedia.getBoundingClientRect().top;
+    const target = staticMotion ? 1 : clamp01((innerHeight - top) / Math.max(1, referenceMedia.clientHeight));
+    unsettled = advanceReferenceSpring(mediaState, target, dt) || unsettled;
+    referenceMedia.style.transform = `scale(${.7 + .3 * mediaState.x})`;
+    $('img', referenceMedia).style.transform = `scale(${1.3 - .3 * mediaState.x})`;
+  }
+  if (unsettled) requestReferenceEffects(); else referenceLastTime = 0;
+}
+const referenceResizeObserver = new ResizeObserver(syncReferenceCardLayout);
+referenceCards.forEach(card => referenceResizeObserver.observe(card));
+if (referenceMedia) referenceResizeObserver.observe(referenceMedia);
+addEventListener('scroll', requestReferenceEffects, { passive: true });
+addEventListener('resize', syncReferenceCardLayout);
+document.fonts.ready.then(syncReferenceCardLayout);
+
+// The reference's short character entrance: x100/rotate5, .03s stagger, .7s easing.
+const characterNote = $('.intro-note');
+if (characterNote && !reducedMotion) {
+  const original = characterNote.textContent;
+  characterNote.setAttribute('aria-label', original); characterNote.classList.add('char-reveal'); characterNote.replaceChildren();
+  [...original].forEach((letter, index) => {
+    const span = document.createElement('span'); span.className = 'scroll-char'; span.textContent = letter;
+    span.setAttribute('aria-hidden', 'true'); span.style.setProperty('--char-delay', `${index * .03}s`); characterNote.append(span);
+  });
+  const characterObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { characterNote.classList.add('in-view'); characterObserver.disconnect(); }
+  }, { threshold: .5 });
+  characterObserver.observe(characterNote);
+}
+syncReferenceCardLayout();
+syncBackgroundVideo();
+
+// Sticky panels use their untransformed layout markers as anchor destinations.
+function navigateReferenceAnchor(hash, immediate = false) {
+  const index = referenceCards.findIndex(card => `#${card.id}` === hash);
+  if (index < 0) return false;
+  if (smoothScroll) smoothScroll.scrollTo(referenceMarkers[index], { offset: -56, force: true, immediate });
+  else referenceCards[index].scrollIntoView({ behavior: 'instant', block: 'start' });
+  return true;
+}
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || event.defaultPrevented || link.classList.contains('skip') || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const hash = link.getAttribute('href');
+  const target = hash === '#' ? 0 : document.getElementById(hash.slice(1));
+  if (target === null) return;
+  event.preventDefault(); event.stopPropagation();
+  const desiredHash = hash === '#' ? '' : hash;
+  if (location.hash !== desiredHash) history.pushState(null, '', desiredHash || `${location.pathname}${location.search}`);
+  if (navigateReferenceAnchor(hash)) return;
+  if (smoothScroll) smoothScroll.scrollTo(target, { offset: target === 0 ? 0 : -90, force: true });
+  else if (target === 0) window.scrollTo({ top: 0, behavior: 'instant' });
+  else target.scrollIntoView({ behavior: 'instant', block: 'start' });
+});
+addEventListener('popstate', () => navigateReferenceAnchor(location.hash, true));
+if (location.hash) requestAnimationFrame(() => navigateReferenceAnchor(location.hash, true));
