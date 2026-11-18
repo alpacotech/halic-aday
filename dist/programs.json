@@ -1,0 +1,828 @@
+[
+  {
+    "name": "Tıp Programı",
+    "faculty": "Tıp Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/tip-fakultesi/tip-programi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Tıp Programı (İngilizce)",
+    "faculty": "Tıp Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/tip-fakultesi/tip-programi-ingilizce/"
+  },
+  {
+    "name": "Beslenme ve Diyetetik",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/beslenme-ve-diyetetik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Beslenme ve Diyetetik (İngilizce)",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/beslenme-ve-diyetetik-ingilizce/"
+  },
+  {
+    "name": "Dil ve Konuşma Terapisi",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/dil-ve-konusma-terapisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Ebelik",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/ebelik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Ergoterapi",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/ergoterapi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Fizyoterapi ve Rehabilitasyon (İngilizce)",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/fizyoterapi-ve-rehabilitasyon-ingilizce/"
+  },
+  {
+    "name": "Fizyoterapi ve Rehabilitasyon",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/fizyoterapi-ve-rehabilitasyon/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Hemşirelik",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/hemsirelik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Hemşirelik (İngilizce)",
+    "faculty": "Sağlık Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/saglik-bilimleri-fakultesi/hemsirelik-ingilizce/"
+  },
+  {
+    "name": "Endüstriyel Tasarım",
+    "faculty": "Mimarlık Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/mimarlik-fakultesi/endustriyel-tasarim/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İç Mimarlık ve Çevre Tasarımı",
+    "faculty": "Mimarlık Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/mimarlik-fakultesi/ic-mimarlik-ve-cevre-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Mimarlık",
+    "faculty": "Mimarlık Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/mimarlik-fakultesi/mimarlik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bilgisayar Mühendisliği (İngilizce)",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/bilgisayar-muhendisligi-ingilizce/"
+  },
+  {
+    "name": "Elektrik-Elektronik Mühendisliği (İngilizce)",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/elektrik-elektronik-muhendisligi-ingilizce/"
+  },
+  {
+    "name": "Endüstri Mühendisliği (İngilizce)",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/endustri-muhendisligi-ingilizce/"
+  },
+  {
+    "name": "Makine Mühendisliği (İngilizce)",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/makine-muhendisligi-ingilizce/"
+  },
+  {
+    "name": "Yapay Zeka Mühendisliği",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/yapay-zeka-muhendisligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Yazılım Mühendisliği (İngilizce)",
+    "faculty": "Mühendislik Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/muhendislik-fakultesi/yazilim-muhendisligi-ingilizce/"
+  },
+  {
+    "name": "Ekonomi",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/ekonomi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İşletme",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/isletme/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İşletme (İngilizce)",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/isletme-ingilizce/"
+  },
+  {
+    "name": "Lojistik Yönetimi (İngilizce)",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/lojistik-yonetimi-ingilizce/"
+  },
+  {
+    "name": "Siyaset Bilimi ve Uluslararası İlişkiler",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/siyaset-bilimi-ve-uluslararasi-iliskiler/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Uluslararası Ticaret ve İşletmecilik (İngilizce)",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/uluslararasi-ticaret-ve-isletmecilik-ingilizce/"
+  },
+  {
+    "name": "Yönetim Bilişim Sistemleri (İngilizce)",
+    "faculty": "İşletme Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/isletme-fakultesi/yonetim-bilisim-sistemleri-ingilizce/"
+  },
+  {
+    "name": "Çizgi Film ve Animasyon",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SÖZ",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/cizgi-film-ve-animasyon/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Dijital Oyun Tasarımı",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/dijital-oyun-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Gastronomi ve Mutfak Sanatları",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SÖZ",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/gastronomi-ve-mutfak-sanatlari/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Görsel İletişim Tasarımı",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SÖZ",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/gorsel-iletisim-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Grafik Tasarım",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/grafik-tasarim/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Tekstil ve Moda Tasarımı",
+    "faculty": "Güzel Sanatlar Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/guzel-sanatlar-fakultesi/tekstil-ve-moda-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Amerikan Kültürü ve Edebiyatı",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "DİL",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/amerikan-kulturu-ve-edebiyati/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İngilizce Mütercim ve Tercümanlık",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "DİL",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/ingilizce-mutercim-ve-tercumanlik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Matematik",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/matematik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Moleküler Biyoloji ve Genetik",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/molekuler-biyoloji-ve-genetik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Moleküler Biyoloji ve Genetik (İngilizce)",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "SAY",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/molekuler-biyoloji-ve-genetik-ingilizce/"
+  },
+  {
+    "name": "Psikoloji",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/psikoloji/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Psikoloji (İngilizce)",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "EA",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/psikoloji-ingilizce/"
+  },
+  {
+    "name": "Türk Dili ve Edebiyatı",
+    "faculty": "Fen Edebiyat Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "SÖZ",
+    "url": "https://aday.halic.edu.tr/fen-edebiyat-fakultesi/turk-dili-ve-edebiyati/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Antrenörlük Eğitimi",
+    "faculty": "Spor Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/spor-bilimleri-fakultesi/antrenorluk-egitimi/",
+    "scoreDetail": "ÖZYES",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Beden Eğitimi ve Spor Öğretmenliği",
+    "faculty": "Spor Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/spor-bilimleri-fakultesi/beden-egitim-ve-spor-ogretmenligi/",
+    "scoreDetail": "ÖZYES",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Rekreasyon",
+    "faculty": "Spor Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/spor-bilimleri-fakultesi/rekreasyon/",
+    "scoreDetail": "ÖZYES",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Spor Yöneticiliği",
+    "faculty": "Spor Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/spor-bilimleri-fakultesi/spor-yoneticiligi/",
+    "scoreDetail": "ÖZYES",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Spor Yöneticiliği (İngilizce)",
+    "faculty": "Spor Bilimleri Fakültesi",
+    "degree": "Lisans",
+    "language": "İngilizce",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/spor-bilimleri-fakultesi/spor-yoneticiligi-ingilizce/",
+    "scoreDetail": "ÖZYES"
+  },
+  {
+    "name": "Müzik Teknolojisi",
+    "faculty": "Konservatuvar",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/konservatuvar/muzik-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Opera",
+    "faculty": "Konservatuvar",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/konservatuvar/opera/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Tiyatro",
+    "faculty": "Konservatuvar",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/konservatuvar/tiyatro/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Türk Musikisi",
+    "faculty": "Konservatuvar",
+    "degree": "Lisans",
+    "language": "Belirtilmemiş",
+    "score": "Özel Yetenek",
+    "url": "https://aday.halic.edu.tr/konservatuvar/turk-musikisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Anestezi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/anestezi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Aşçılık",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/ascilik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bankacılık ve Sigortacılık",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/bankacilik-ve-sigortacilik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bilgisayar Programcılığı",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/bilgisayar-programciligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bilgisayar Teknolojisi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/bilgisayar-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bilişim Güvenliği Teknolojisi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/bilisim-guvenligi-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Bulut Bilişim Operatorlüğü",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/bulut-bilisim-operatorlugu/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Büyük Veri Analistliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/buyuk-veri-analistligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Çocuk Gelişimi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/cocuk-gelisimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Dış Ticaret",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/dis-ticaret/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Dijital Dönüşüm Elektroniği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/dijital-donusum-elektronigi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Elektrik",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/elektrik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Elektronik Teknolojisi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/elektronik-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "E-Ticaret ve Pazarlama",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/e-ticaret-ve-pazarlama/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Fizyoterapi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/fizyoterapi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Grafik Tasarımı",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/grafik-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İç Mekan Tasarımı",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/ic-mekan-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İlk ve Acil Yardım",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/ilk-ve-acil-yardim/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İmalat Yürütme Sistemleri Operatörlüğü",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/imalat-yurutme-sistemleri-operatorlugu/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İnsan Kaynakları Yönetimi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/insan-kaynaklari-yonetimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İnsansız Araç Teknikerliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/insansiz-arac-teknikerligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İnşaat Teknolojisi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/insaat-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "İşletme Yönetimi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/isletme-yonetimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Kurumsal Bilişim Uzmanlığı",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/kurumsal-bilisim-uzmanligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Lojistik",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/lojistik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Mahkeme Büro Hizmetleri",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/mahkeme-buro-hizmetleri/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Makine",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/makine/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Mekatronik",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/mekatronik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Moda Tasarımı",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/moda-tasarimi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Optisyenlik",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/optisyenlik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Otonom Sistemler Teknikerliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/otonom-sistemler-teknikerligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Oyun Geliştirme ve Programlama",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/oyun-gelistirme-ve-programlama/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Raylı Sistemler İşletmeciliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/rayli-sistemler-isletmeciligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Robotik ve Yapay Zekâ",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/robotik-ve-yapay-zeka/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Saç Bakımı ve Güzellik Hizmetleri",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/sac-bakimi-ve-guzellik-hizmetleri/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Sağlık Bilgi Sistemleri Teknikerliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/saglik-bilgi-sistemleri-teknikerligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Sağlık Turizmi İşletmeciliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/saglik-turizmi-isletmeciligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Siber Güvenlik",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/siber-guvenlik/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Sivil Hava Ulaştırma İşletmeciliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/sivil-hava-ulastirma-isletmeciligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Tıbbi Görüntüleme Teknikleri",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/tibbi-goruntuleme-teknikleri/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Turizm ve Otel İşletmeciliği",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/turizm-ve-otel-isletmeciligi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Uçak Teknolojisi",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/ucak-teknolojisi/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  },
+  {
+    "name": "Yapay Zekâ Operatörlüğü",
+    "faculty": "Meslek Yüksekokulu",
+    "degree": "Ön lisans",
+    "language": "Belirtilmemiş",
+    "score": "TYT",
+    "url": "https://aday.halic.edu.tr/meslek-yuksekokulu/yapay-zeka-operatorlugu/",
+    "languageNote": "Resmî program adında eğitim dili belirtilmiyor; program sayfasından kontrol edin."
+  }
+]
